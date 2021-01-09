@@ -1,1 +1,3 @@
-# CeciliaLehis_3_09012021
+Projet 3 - Dynamisez une page web avec des animations CSS
+
+Parcours développeur web chez OpenClassRooms
