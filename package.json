@@ -1,0 +1,19 @@
+{
+  "name": "cecilialehis_3_09012021",
+  "version": "1.0.0",
+  "description": "Projet 3 - Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amethylia/CeciliaLehis_3_09012021.git"
+  },
+  "author": "Cécilia Lehis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amethylia/CeciliaLehis_3_09012021/issues"
+  },
+  "homepage": "https://github.com/Amethylia/CeciliaLehis_3_09012021#readme"
+}
