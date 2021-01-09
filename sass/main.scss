@@ -1,0 +1,11 @@
+.body{
+    margin: 0;
+}
+
+.header{
+    padding: 25px 0 25px 0;
+    display: flex;
+    &__logo{
+        margin: 0 auto;
+    }
+}
