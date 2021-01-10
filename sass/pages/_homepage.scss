@@ -1,0 +1,164 @@
+/* searchbar */
+
+.searchbar{
+    padding: 15px 0 15px 0;
+    background-color: $backgroundcolordark;
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fa-map-marker-alt{
+        color: $iconcolor;
+        }
+        &__champ{
+        margin-left: 15px;
+        background: none;
+        border: none;
+        width: 160px;
+        }
+    }
+}
+
+/* discover */
+
+.discover{
+    padding: 30px 50px;
+    background-color: $backgroundcolor;
+    text-align: center;
+    a{
+        text-decoration: none;
+    }
+    &__button{
+        padding: 5px;
+        margin: 40px auto;
+        width: 250px;
+        color: $white;
+        border-radius: 50px;
+        background: $color-gradient;
+        box-shadow: 0px 4px 10px #858585;
+    }
+}
+
+/* operation */
+
+.operation{
+    padding: $general-padding;
+    @media screen and (max-width: 880px){
+        padding: 50px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding-left: 20px;
+        &__content{
+            display: flex;
+            align-items: center;
+            width: 30%;
+            position: relative;
+            cursor: pointer;
+            @media screen and (max-width: 880px){
+                @include respcontent;
+            }
+            @media screen and (max-width: 600px){
+                width: 100%;
+            }
+            &__number{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                background-color: $color-primary;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                position: absolute;
+                transform: translateX(-20px);
+            }
+            &__icon{
+                display: flex;
+                align-items: center;
+                background-color: $backgroundcolor;
+                box-shadow: $general-bs;
+                padding: 10px 20px;
+                border-radius: 30px;
+                width: 100%;
+                height: 100%;
+                .fas{
+                padding: 0 30px 0 30px;
+                }
+            }
+            &:hover{
+                .operation__wrapper__content__icon{
+                    @include hover;
+                }
+                .fas{
+                    color: $color-primary;
+                    transition: 300ms ease-in-out;
+                } 
+            }
+        }
+    }
+}
+
+/* restaurants */
+
+.restaurants{
+    padding: $general-padding;
+    background-color: $backgroundcolor;
+    @media screen and (max-width: 1500px){
+        padding: 50px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__content{
+        width: 22%;
+        background-color: $white; 
+        box-shadow: $general-bs;
+        border-radius: 20px;
+        position: relative;
+        @media screen and (max-width: 1500px){
+            @include respcontent;
+            }
+            @media screen and (max-width: 600px){
+                width: 100%;
+            }
+        a{
+            text-decoration: none;
+            color: $black;
+        }
+        img{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        &__new{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: $color-tertiary;
+            padding: 5px 10px;
+        }
+        &__info{
+            position: relative;
+            padding: 15px;
+            .title{
+                margin: 0;
+            }
+            .description{
+                margin-top: 5px;
+            }
+            .fa-heart{
+                position: absolute;
+                top: 20px;
+                right: 15px;
+            }
+        }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import "./variables";
+
+/* responsive content 880px */
+@mixin respcontent{
+    width: 48%;
+    margin-bottom: 50px;
+}
+
+/* hover button home page */
+@mixin hover($background-color: $backgroundcolor, $shadow: $general-bs){
+    @if ( lightness($background-color) < 25% ) and ( lightness($shadow) < 25% ){
+        $background-color: lighten($color-primary, 60%);
+        $shadow: darken($shadow, 30%);
+    }
+}

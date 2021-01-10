@@ -1,0 +1,25 @@
+/* font */
+.bigtitle{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.title{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.description{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+/* icons */
+.fas, .far{
+    color: $iconcolor;
+    font-size: 22px;
+}
