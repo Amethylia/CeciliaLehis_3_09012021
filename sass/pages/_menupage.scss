@@ -1,0 +1,60 @@
+/* menu */
+
+.menu{
+    padding: 20px 50px;
+    background-color: $backgroundcolor;
+    @include lg {
+        padding: $general-padding;  
+    }
+    &__title{
+        position: relative;
+        display: flex;
+        align-items: center;
+        .fa-heart{
+            position: absolute;
+            right: 0;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__content{
+        width: 100%;  
+        background-color: $white; 
+        box-shadow: $general-bs;
+        border-radius: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        @include sm {
+            width: 48%;
+        }
+        @include lg {
+            width: 22%;
+        }
+        &__new{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: $color-tertiary;
+            padding: 5px 10px;
+        }
+        &__info{
+            position: relative;
+            padding: 15px 15px 0;
+            .title{
+                margin: 0;
+            }
+            .description{
+                margin-top: 5px;
+            }
+            .price{
+                float: right;
+                position: absolute;
+                top: 40%;
+                right: 6%;
+            }
+        }
+        }
+    }
+}
