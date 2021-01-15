@@ -3,16 +3,16 @@
     background-color: $black;
     color: $white;
     &__wrapper{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        @media screen and (max-width: 880px){
-            flex-direction: column;
+        flex-direction: column;
+        @include md {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
         }
         &__column{
-            width: 30%;
-            @media screen and (max-width: 880px){
-                width: 100%;
+            width: 100%;
+            @include md {
+                width: 30%;
             }
             .logo__footer{
                 font-family: 'Shrikhand';
@@ -23,11 +23,11 @@
             &__icon{
                 display: flex;
                 .fas{
+                    margin-right: 10px;
                     color: $white;
-                    margin-right: 25px;
-                    width: 5%;
-                    @media screen and (max-width: 880px){
-                        margin-right: 10px;
+                    width: 7%;
+                    @include md {
+                        margin-right: 25px;
                     }
                 }
             }

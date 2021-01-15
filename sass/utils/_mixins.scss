@@ -1,15 +1,48 @@
 @import "./variables";
 
-/* responsive content 880px */
-@mixin respcontent{
-    width: 48%;
-    margin-bottom: 50px;
+/* media */
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+  
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+  
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+/* operation button */
+@mixin icon-color{
+    padding: 0 30px 0 30px;
+    &:hover{
+        color: $color-primary;
+        transition: 300ms ease-in-out;
+    }
 }
 
-/* hover button home page */
-@mixin hover($background-color: $backgroundcolor, $shadow: $general-bs){
-    @if ( lightness($background-color) < 25% ) and ( lightness($shadow) < 25% ){
-        $background-color: lighten($color-primary, 60%);
-        $shadow: darken($shadow, 30%);
+@mixin button-bg{
+    background-color: $backgroundcolor;
+    &:hover {
+      background-color: lighten($color-primary,30%);
+      transition: 300ms ease-in-out;
+    }
+  }
+
+@mixin button-bs{
+    box-shadow: $general-bs;
+    &:hover {
+    box-shadow: $hover-bs;
+    transition: 300ms ease-in-out;
     }
 }

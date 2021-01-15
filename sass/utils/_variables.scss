@@ -3,7 +3,9 @@ $white: #FFF;
 $black: #333;
 $backgroundcolor: #f5f5f5;
 $backgroundcolordark: #ebebeb;
-$iconcolor: rgb(94, 94, 94);
+$lightgrey: #dfdfdf;
+$darkgrey: #b1b1b1;
+$iconcolor: #5E5E5E;
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -13,5 +15,13 @@ $color-gradient: linear-gradient(#FF79DA,#9356DC);
 $general-padding: 50px 50px 90px 50px;
 
 /* box-shadow */
-$general-bs: 3px 3px 12px #dfdfdf;
+$general-bs: 3px 3px 12px $lightgrey;
+$hover-bs: 3px 3px 12px $darkgrey;
 
+/* breakpoints */
+// mobiles
+$screen-sm-min: 600px;
+// Tablets
+$screen-md-min: 880px;
+// Large tablets and desktops
+$screen-lg-min: 1500px;
