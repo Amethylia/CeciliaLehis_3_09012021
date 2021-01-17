@@ -1,45 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+
 /* font */
 .bigtitle{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 26px;
+    @include md {
+        font-size: 28px;
+    }
 }
 
 .subtitle{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: uppercase;
-    margin: 10px 0 10px;
+    margin: 10px 0 30px;
+    position: relative;
+    &:after{
+        content: '';
+        border-bottom: 4px solid $color-tertiary;
+        width: 40px;
+        position: absolute;
+        top: 30px;
+        left: 0;
+    }
 }
 
 .title{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
+    @include md {
+        font-size: 18px;
+    }
 }
 
 .menutitle{
-    font-family: 'Shrikhand';
+    font-family: 'Shrikhand', cursive;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .description{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 18px;
-    margin: 0 0 10px;
+    font-size: 16px;
+    @include md {
+        font-size: 18px;
+    }
 }
 
 .price{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 18px;
 }
 
 /* icons */
-.fas, .far{
+.fas{
+    color: $iconcolor;
+    font-size: 20px;
+    @include md {
+        font-size: 25px;
+    }
+}
+
+.far{
     color: $iconcolor;
     font-size: 25px;
 }

@@ -1,7 +1,10 @@
 .footer{
-    padding: 50px;
+    padding: 40px 30px;
     background-color: $black;
     color: $white;
+    @include md {
+        padding: $resp-padding;
+    }
     &__wrapper{
         flex-direction: column;
         @include md {
@@ -16,16 +19,23 @@
             }
             .logo__footer{
                 font-family: 'Shrikhand';
-                font-size: 30px;
+                font-size: 28px;
                 color: $white;
                 margin-top: 0;
+                margin-bottom: 20px;
             }
             &__icon{
                 display: flex;
+                align-items: center;
+                margin-bottom: 5px;
                 .fas{
                     margin-right: 10px;
                     color: $white;
                     width: 7%;
+                    font-size: 20px;
+                    @include sm {
+                        width: 4%;
+                    }
                     @include md {
                         margin-right: 25px;
                     }
@@ -34,6 +44,9 @@
             &--like{
                 text-decoration: none;
                 color: $white;
+            }
+            .description{
+                margin: 0 0 5px 0;
             }
         }
     }

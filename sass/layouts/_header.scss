@@ -1,7 +1,10 @@
 .header{
-    padding: 40px 50px;
+    padding: 35px 30px;
     display: flex;
     align-items: center;
+    @include md {
+        padding: 35px 50px;
+    }
     &__logo{
         margin: 0 auto;
     }

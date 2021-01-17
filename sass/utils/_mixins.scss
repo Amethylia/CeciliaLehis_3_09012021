@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./keyframes";
 
 /* media */
 // Small devices
@@ -22,16 +23,22 @@
     }
  }
  
+/* new menu */
+@mixin new-color {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary,40%);
+}
+
 /* operation button */
-@mixin icon-color{
-    padding: 0 30px 0 30px;
+@mixin icon-color {
+    padding: 0 20px;
     &:hover{
         color: $color-primary;
         transition: 300ms ease-in-out;
     }
 }
 
-@mixin button-bg{
+@mixin button-bg {
     background-color: $backgroundcolor;
     &:hover {
       background-color: lighten($color-primary,30%);
@@ -39,10 +46,21 @@
     }
   }
 
-@mixin button-bs{
+@mixin button-bs {
     box-shadow: $general-bs;
     &:hover {
     box-shadow: $hover-bs;
     transition: 300ms ease-in-out;
+    }
+}
+
+/* check */
+@mixin check {
+    cursor: pointer;
+    .menu__wrapper__content__check{
+        width: 100px;
+    }
+    .fa-check-circle{
+        animation: progress-check 800ms ease-in-out;
     }
 }
