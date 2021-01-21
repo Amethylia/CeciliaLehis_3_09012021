@@ -1,4 +1,4 @@
-/* check */
+/* check animation */
 @keyframes progress-check {
     0% {
         transform: rotate(0deg);
@@ -8,7 +8,7 @@
     }
 }
 
-/* heart */
+/* heart animation */
 @keyframes progress-heart {
     0% {
         opacity: 0;
@@ -20,5 +20,56 @@
     100% {
         opacity: 100%;
         color: $color-primary;
+    }
+}
+
+/* menu animation */
+@keyframes progress-menu {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+@keyframes progress-menu-second {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    15% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+@keyframes progress-menu-third {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+@keyframes progress-menu-fourth {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
     }
 }

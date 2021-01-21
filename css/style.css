@@ -8,7 +8,7 @@
 /* padding */
 /* box-shadow */
 /* breakpoints */
-/* check */
+/* check animation */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 @keyframes progress-check {
   0% {
@@ -18,7 +18,7 @@
     transform: rotate(360deg);
   }
 }
-/* heart */
+/* heart animation */
 @keyframes progress-heart {
   0% {
     opacity: 0;
@@ -30,6 +30,56 @@
   100% {
     opacity: 100%;
     color: #9356DC;
+  }
+}
+/* menu animation */
+@keyframes progress-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes progress-menu-second {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes progress-menu-third {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes progress-menu-fourth {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
   }
 }
 /* media */
@@ -179,7 +229,7 @@
   box-shadow: 0px 4px 10px #858585;
 }
 .discover__button:hover {
-  background: linear-gradient(#fd88dc, #a879e6);
+  background: linear-gradient(#fd91df, #af83e7);
   transition: 400ms ease-in-out;
 }
 .discover__button:hover {
@@ -334,6 +384,7 @@
   position: absolute;
   top: 15px;
   right: 20px;
+  cursor: pointer;
 }
 .restaurants__wrapper__content__info .heart .fas {
   font-size: 25px;
@@ -346,7 +397,6 @@
 }
 .restaurants__wrapper__content__info .heart:active .fa-heart-solid {
   display: flex;
-  cursor: pointer;
   color: #9356DC;
   animation: progress-heart 800ms ease-in-out;
 }
@@ -356,7 +406,6 @@
   }
   .restaurants__wrapper__content__info .heart:hover .fa-heart-solid {
     display: flex;
-    cursor: pointer;
     color: #9356DC;
     animation: progress-heart 800ms ease-in-out;
   }
@@ -402,6 +451,7 @@
 .menu__title .heart {
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 .menu__title .heart .fas {
   font-size: 25px;
@@ -414,7 +464,6 @@
 }
 .menu__title .heart:active .fa-heart-solid {
   display: flex;
-  cursor: pointer;
   color: #9356DC;
   animation: progress-heart 800ms ease-in-out;
 }
@@ -424,7 +473,6 @@
   }
   .menu__title .heart:hover .fa-heart-solid {
     display: flex;
-    cursor: pointer;
     color: #9356DC;
     animation: progress-heart 800ms ease-in-out;
   }
@@ -447,6 +495,16 @@
   display: flex;
   overflow: hidden;
   cursor: pointer;
+  animation: progress-menu 700ms ease-in-out;
+}
+.menu__wrapper__content:nth-child(2) {
+  animation: progress-menu-second 850ms ease-in-out;
+}
+.menu__wrapper__content:nth-child(3) {
+  animation: progress-menu-third 1000ms ease-in-out;
+}
+.menu__wrapper__content:nth-child(4) {
+  animation: progress-menu-fourth 1150ms ease-in-out;
 }
 @media (min-width: 600px) {
   .menu__wrapper__content {
@@ -537,7 +595,7 @@
   text-align: center;
 }
 .menu__button:hover {
-  background: linear-gradient(#fd88dc, #a879e6);
+  background: linear-gradient(#fd91df, #af83e7);
   transition: 400ms ease-in-out;
 }
 .menu__button:hover {
