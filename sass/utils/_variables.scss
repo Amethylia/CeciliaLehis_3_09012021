@@ -10,14 +10,20 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-gradient: linear-gradient(#FF79DA,#9356DC);
+$color-gradient-hover: linear-gradient(#fd88dc,#a879e6);
+
 
 /* padding */
 $general-padding: 30px;
 $resp-padding: 50px;
 
+
 /* box-shadow */
 $general-bs: 3px 3px 12px $lightgrey;
 $hover-bs: 3px 3px 12px $darkgrey;
+$button-bs: 0px 4px 10px #858585;
+$button-hover: 0px 4px 10px #636363;
+
 
 /* breakpoints */
 // mobiles

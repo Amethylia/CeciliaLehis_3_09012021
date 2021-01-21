@@ -7,3 +7,18 @@
         transform: rotate(360deg);
     }
 }
+
+/* heart */
+@keyframes progress-heart {
+    0% {
+        opacity: 0;
+        color: $color-secondary;
+    }
+    50% {
+        color: $color-secondary;
+    }
+    100% {
+        opacity: 100%;
+        color: $color-primary;
+    }
+}

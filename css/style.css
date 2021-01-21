@@ -18,10 +18,26 @@
     transform: rotate(360deg);
   }
 }
+/* heart */
+@keyframes progress-heart {
+  0% {
+    opacity: 0;
+    color: #FF79DA;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    opacity: 100%;
+    color: #9356DC;
+  }
+}
 /* media */
 /* new menu */
+/* general button */
 /* operation button */
 /* check */
+/* heart hover button */
 /* font & icons */
 /* font */
 .bigtitle {
@@ -162,6 +178,14 @@
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 4px 10px #858585;
 }
+.discover__button:hover {
+  background: linear-gradient(#fd88dc, #a879e6);
+  transition: 400ms ease-in-out;
+}
+.discover__button:hover {
+  box-shadow: 0px 4px 10px #636363;
+  transition: 400ms ease-in-out;
+}
 
 /* operation */
 .operation {
@@ -228,18 +252,18 @@
 }
 .operation__wrapper__content__icon:hover {
   background-color: #e4d5f6;
-  transition: 300ms ease-in-out;
+  transition: 400ms ease-in-out;
 }
 .operation__wrapper__content__icon:hover {
   box-shadow: 3px 3px 12px #b1b1b1;
-  transition: 300ms ease-in-out;
+  transition: 400ms ease-in-out;
 }
 .operation__wrapper__content__icon .fas {
   padding: 0 20px;
 }
 .operation__wrapper__content__icon .fas:hover {
   color: #9356DC;
-  transition: 300ms ease-in-out;
+  transition: 400ms ease-in-out;
 }
 
 /* restaurants */
@@ -306,10 +330,36 @@
 .restaurants__wrapper__content__info .description {
   margin-top: 5px;
 }
-.restaurants__wrapper__content__info .fa-heart {
+.restaurants__wrapper__content__info .heart {
   position: absolute;
   top: 15px;
   right: 20px;
+}
+.restaurants__wrapper__content__info .heart .fas {
+  font-size: 25px;
+}
+.restaurants__wrapper__content__info .heart .fa-heart-solid {
+  display: none;
+}
+.restaurants__wrapper__content__info .heart:active .fa-heart-regular {
+  display: none;
+}
+.restaurants__wrapper__content__info .heart:active .fa-heart-solid {
+  display: flex;
+  cursor: pointer;
+  color: #9356DC;
+  animation: progress-heart 800ms ease-in-out;
+}
+@media (min-width: 1500px) {
+  .restaurants__wrapper__content__info .heart:hover .fa-heart-regular {
+    display: none;
+  }
+  .restaurants__wrapper__content__info .heart:hover .fa-heart-solid {
+    display: flex;
+    cursor: pointer;
+    color: #9356DC;
+    animation: progress-heart 800ms ease-in-out;
+  }
 }
 
 /* menus */
@@ -349,9 +399,35 @@
   display: flex;
   align-items: center;
 }
-.menu__title .fa-heart {
+.menu__title .heart {
   position: absolute;
   right: 0;
+}
+.menu__title .heart .fas {
+  font-size: 25px;
+}
+.menu__title .heart .fa-heart-solid {
+  display: none;
+}
+.menu__title .heart:active .fa-heart-regular {
+  display: none;
+}
+.menu__title .heart:active .fa-heart-solid {
+  display: flex;
+  cursor: pointer;
+  color: #9356DC;
+  animation: progress-heart 800ms ease-in-out;
+}
+@media (min-width: 1500px) {
+  .menu__title .heart:hover .fa-heart-regular {
+    display: none;
+  }
+  .menu__title .heart:hover .fa-heart-solid {
+    display: flex;
+    cursor: pointer;
+    color: #9356DC;
+    animation: progress-heart 800ms ease-in-out;
+  }
 }
 .menu__wrapper {
   display: flex;
@@ -369,6 +445,8 @@
   position: relative;
   margin-bottom: 20px;
   display: flex;
+  overflow: hidden;
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .menu__wrapper__content {
@@ -437,6 +515,7 @@
   border-radius: 0 20px 20px 0;
   margin-left: auto;
   transition: all 800ms ease-in-out 35ms;
+  overflow: hidden;
 }
 .menu__wrapper__content__check .fa-check-circle {
   color: #FFF;
@@ -456,6 +535,14 @@
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 4px 10px #858585;
   text-align: center;
+}
+.menu__button:hover {
+  background: linear-gradient(#fd88dc, #a879e6);
+  transition: 400ms ease-in-out;
+}
+.menu__button:hover {
+  box-shadow: 0px 4px 10px #636363;
+  transition: 400ms ease-in-out;
 }
 
 /* footer */

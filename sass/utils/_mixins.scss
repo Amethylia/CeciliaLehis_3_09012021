@@ -4,63 +4,88 @@
 /* media */
 // Small devices
 @mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
-        @content;
-    }
- }
-  
- // Medium devices
- @mixin md {
-    @media (min-width: #{$screen-md-min}) {
-        @content;
-    }
- }
-  
- // Large devices
- @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
-        @content;
-    }
- }
- 
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
 /* new menu */
 @mixin new-color {
-    background-color: $color-tertiary;
-    color: darken($color-tertiary,40%);
+  background-color: $color-tertiary;
+  color: darken($color-tertiary, 40%);
+}
+
+/* general button */
+@mixin button-bg {
+  background: $color-gradient;
+  &:hover {
+    background: $color-gradient-hover;
+    transition: 400ms ease-in-out;
+  }
+}
+@mixin button-bs {
+  box-shadow: $button-bs;
+  &:hover {
+    box-shadow: $button-hover;
+    transition: 400ms ease-in-out;
+  }
 }
 
 /* operation button */
 @mixin icon-color {
-    padding: 0 20px;
-    &:hover{
-        color: $color-primary;
-        transition: 300ms ease-in-out;
-    }
-}
-
-@mixin button-bg {
-    background-color: $backgroundcolor;
-    &:hover {
-      background-color: lighten($color-primary,30%);
-      transition: 300ms ease-in-out;
-    }
+  padding: 0 20px;
+  &:hover {
+    color: $color-primary;
+    transition: 400ms ease-in-out;
   }
-
-@mixin button-bs {
-    box-shadow: $general-bs;
-    &:hover {
+}
+@mixin button-operation-bg {
+  background-color: $backgroundcolor;
+  &:hover {
+    background-color: lighten($color-primary, 30%);
+    transition: 400ms ease-in-out;
+  }
+}
+@mixin button-operation-bs {
+  box-shadow: $general-bs;
+  &:hover {
     box-shadow: $hover-bs;
-    transition: 300ms ease-in-out;
-    }
+    transition: 400ms ease-in-out;
+  }
 }
 
 /* check */
 @mixin check {
+  cursor: pointer;
+  .menu__wrapper__content__check {
+    width: 100px;
+  }
+  .fa-check-circle {
+    animation: progress-check 800ms ease-in-out;
+  }
+}
+
+/* heart hover button */
+@mixin heart-hover {
+  .fa-heart-regular {
+    display: none;
+  }
+  .fa-heart-solid {
+    display: flex;
     cursor: pointer;
-    .menu__wrapper__content__check{
-        width: 100px;
-    }
-    .fa-check-circle{
-        animation: progress-check 800ms ease-in-out;
-    }
+    color: $color-primary;
+    animation: progress-heart 800ms ease-in-out;
+  }
 }
