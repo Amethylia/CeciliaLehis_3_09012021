@@ -3,11 +3,13 @@
 /* padding */
 /* box-shadow */
 /* breakpoints */
+/* spinner */
 /* mixins */
 /* color */
 /* padding */
 /* box-shadow */
 /* breakpoints */
+/* spinner */
 /* check animation */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 @keyframes progress-check {
@@ -80,6 +82,51 @@
   100% {
     opacity: 100%;
     transform: translateY(0);
+  }
+}
+/* spinner animation */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes colors {
+  0% {
+    stroke: #FF79DA;
+  }
+  25% {
+    stroke: #9356DC;
+  }
+  50% {
+    stroke: #99E2D0;
+  }
+  75% {
+    stroke: #9356DC;
+  }
+  100% {
+    stroke: #FF79DA;
+  }
+}
+@keyframes global {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 /* media */
@@ -171,6 +218,7 @@
 /* body */
 .body {
   margin: 0;
+  position: relative;
 }
 
 /* header */
@@ -189,6 +237,26 @@
 }
 
 /* homepage */
+/* body */
+.global {
+  animation: global 0ms 2000ms both;
+}
+
+/* loading spinner */
+.loading__spinner {
+  position: absolute;
+  z-index: 2;
+  top: 22%;
+  left: 45%;
+  width: 140px;
+  height: 140px;
+  animation: rotate 2000ms 100ms linear both;
+}
+.loading__spinner .path {
+  stroke-linecap: round;
+  animation: dash 2000ms ease-in-out, colors 2000ms ease-in-out;
+}
+
 /* searchbar */
 .searchbar {
   padding: 15px 0 15px 0;
