@@ -218,7 +218,6 @@
 /* body */
 .body {
   margin: 0;
-  position: relative;
 }
 
 /* header */
@@ -245,11 +244,12 @@
 /* loading spinner */
 .loading__spinner {
   position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  margin: auto;
   z-index: 2;
-  top: 22%;
-  left: 45%;
   width: 140px;
-  height: 140px;
   animation: rotate 2000ms 100ms linear both;
 }
 .loading__spinner .path {
